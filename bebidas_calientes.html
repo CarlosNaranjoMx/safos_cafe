@@ -104,5 +104,17 @@
     </div>
   </div>
 
+  <!-- Áreas de navegación invisibles -->
+  <a id="area-izquierda" href="index.html" style="position:fixed;top:0;left:0;width:50vw;height:100vh;z-index:10;opacity:0;cursor:pointer;"></a>
+  <a id="area-derecha" href="03_bebidas_frias.html" style="position:fixed;top:0;right:0;width:50vw;height:100vh;z-index:10;opacity:0;cursor:pointer;"></a>
+
+  <script>
+    // Evita que los clics en el contenido principal activen los enlaces invisibles
+    document.querySelector('.menu-section').addEventListener('click', function(e) { e.stopPropagation(); });
+    document.querySelector('h1').addEventListener('click', function(e) { e.stopPropagation(); });
+    // Opcional: el enlace "Índice" también lleva a index.html
+    document.querySelector('.indice').setAttribute('href', 'index.html');
+  </script>
+
 </body>
 </html>
