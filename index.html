@@ -74,14 +74,20 @@
     </li>
   </ul>
 
+  <!-- Enlace invisible que cubre toda el área fuera del menú -->
+  <a id="enlace-fondo" href="bebidas_calientes.html" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:1;opacity:0;cursor:pointer;"></a>
+
   <script>
-    // Redirige a bebidas_calientes.html si se hace clic fuera del texto
-    document.body.addEventListener('click', function(e) {
-      // Si el clic NO es sobre un enlace ni sobre texto seleccionable
-      if (!e.target.closest('a') && e.target.tagName !== 'STRONG' && e.target.tagName !== 'SPAN' && e.target.tagName !== 'H1' && e.target.tagName !== 'LI') {
-        window.location.href = 'bebidas_calientes.html';
-      }
-    });
+    // El enlace invisible debe estar detrás del contenido interactivo
+    document.getElementById('enlace-fondo').style.zIndex = '1';
+    // El menú y el contenido deben estar por encima
+    document.querySelector('ul').style.position = 'relative';
+    document.querySelector('ul').style.zIndex = '2';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '2';
+    // Evita que el enlace invisible capture clics sobre el menú
+    document.querySelector('ul').addEventListener('click', function(e) { e.stopPropagation(); });
+    document.querySelector('h1').addEventListener('click', function(e) { e.stopPropagation(); });
   </script>
 
 </body>
