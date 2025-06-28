@@ -1,49 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú de Ejemplo</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
-        nav { background: #333; padding: 10px 20px; border-radius: 8px; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
-        nav ul li { position: relative; }
-        nav ul li a { color: #fff; text-decoration: none; padding: 10px 18px; display: block; }
-        nav ul li:hover > a { background: #444; }
-        nav ul ul { display: none; position: absolute; top: 100%; left: 0; background: #444; border-radius: 0 0 8px 8px; min-width: 180px; }
-        nav ul li:hover > ul { display: block; }
-        nav ul ul li a { padding: 10px 16px; }
-        nav ul ul li a:hover { background: #555; }
-        h1 { color: #333; }
-        .content { margin-top: 30px; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Índice del Menú</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #000000, #c48c00);
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    ul {
+      list-style-type: disc;
+    }
+    .section {
+      margin-top: 1em;
+    }
+    .submenu {
+      list-style: none;
+      padding-left: 1.5em;
+    }
+    .submenu li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted #ccc;
+      margin-bottom: 4px;
+    }
+    .submenu a {
+      color: white;
+      text-decoration: none;
+    }
+    .submenu a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Proyectos</a>
-                <ul>
-                    <li><a href="#">Python</a></li>
-                    <li><a href="#">FlutterFlow</a></li>
-                    <li><a href="#">Bases de Datos</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Recursos</a>
-                <ul>
-                    <li><a href="#">Documentación</a></li>
-                    <li><a href="#">Imágenes</a></li>
-                    <li><a href="#">Enlaces</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h1>Bienvenido al Menú de Ejemplo</h1>
-        <p>Este menú está preparado para ser publicado en GitHub Pages.<br>
-        Puedes personalizar las secciones y submenús según tus necesidades.</p>
-    </div>
+
+  <h1>Índice</h1>
+
+  <ul>
+    <li class="section"><strong>Bebidas</strong>
+      <ul class="submenu">
+        <li><a href="#">Bebidas calientes</a><span>3</span></li>
+        <li><a href="#">Bebidas frías con leche</a><span>4</span></li>
+        <li><a href="#">Bebidas frías</a><span>5</span></li>
+      </ul>
+    </li>
+
+    <li class="section"><strong>Desayunos</strong>
+      <ul class="submenu">
+        <li><a href="#">Paquetes Desayunos</a><span>7</span></li>
+      </ul>
+    </li>
+
+    <li class="section"><strong>Menú del día</strong>
+      <ul class="submenu">
+        <li><a href="#">Entradas</a><span>9</span></li>
+        <li><a href="#">Carnes y Aves</a><span>10</span></li>
+        <li><a href="#">Comidas al estilo mexicano</a><span>11</span></li>
+        <li><a href="#">Con tortilla de harina</a><span>12</span></li>
+        <li><a href="#">Sándwiches</a><span>13</span></li>
+        <li><a href="#">Pizzas</a><span>14</span></li>
+        <li><a href="#">Hamburguesas</a><span>15</span></li>
+        <li><a href="#">Alitas y boneless</a><span>16</span></li>
+        <li><a href="#">Crepas Premium</a><span>17</span></li>
+        <li><a href="#">Crepas y Hot cakes</a><span>18</span></li>
+        <li><a href="#">Postres</a><span>19</span></li>
+      </ul>
+    </li>
+  </ul>
+
 </body>
 </html>
