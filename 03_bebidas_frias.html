@@ -96,5 +96,26 @@
 
   </div>
 
+  <!-- Áreas de navegación invisibles -->
+  <div id="zona-izquierda" style="position:fixed;top:0;left:0;width:50vw;height:100vh;z-index:10;"></div>
+  <div id="zona-derecha" style="position:fixed;top:0;right:0;width:50vw;height:100vh;z-index:10;"></div>
+
+  <script>
+    // Navegación por zonas clickeables
+    document.getElementById('zona-izquierda').onclick = function(e) {
+      window.location.href = 'bebidas_calientes.html';
+    };
+    document.getElementById('zona-derecha').onclick = function(e) {
+      window.location.href = '04_bebidas_frias.html';
+    };
+    // El enlace "Índice" también lleva a index.html
+    document.querySelector('.indice').setAttribute('href', 'index.html');
+    // Asegura que el contenido principal esté por encima de las zonas invisibles
+    document.querySelector('.menu-section').style.position = 'relative';
+    document.querySelector('.menu-section').style.zIndex = '20';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '20';
+  </script>
+
 </body>
 </html>
