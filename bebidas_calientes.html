@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bebidas Calientes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #000000, #c48c00);
+      color: white;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 10px;
+    }
+    .indice {
+      background: hotpink;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 10px;
+      float: right;
+      text-decoration: none;
+    }
+    .note {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+    .menu-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .category {
+      flex: 1 1 250px;
+    }
+    .category h2 {
+      border-bottom: 1px solid white;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    .item {
+      display: flex;
+      justify-content: space-between;
+      margin: 4px 0;
+    }
+    .flavors {
+      font-size: 0.9em;
+      margin-top: 5px;
+      font-style: italic;
+      color: #ffe;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bebidas Calientes <a href="#" class="indice">Índice</a></h1>
+  <p class="note">Puedes pedir tu bebida fría por $10 más</p>
+
+  <div class="menu-section">
+    <div class="category">
+      <h2>Café</h2>
+      <div class="item"><span>Americano</span><span>$40</span></div>
+      <div class="item"><span>Espresso</span><span>$35</span></div>
+      <div class="item"><span>Macchiato</span><span>$35</span></div>
+      <div class="item"><span>Chocolate caliente</span><span>$50</span></div>
+      <div class="item"><span>Latte</span><span>$60</span></div>
+      <div class="item"><span>Moka / Moka blanco</span><span>$63</span></div>
+      <div class="item"><span>Capuccino clásico</span><span>$50</span></div>
+      <div class="item"><span>Capuccino baileys</span><span>$55</span></div>
+      <div class="item"><span>Capuccino con sabor</span><span>$63</span></div>
+      <div class="flavors">(vainilla, nuez, cajeta, chocochips, canela, chocolate blanco y fresa)</div>
+    </div>
+
+    <div class="category">
+      <h2>Té / infusión</h2>
+      <div class="item"><span>Verde / Limón</span><span>$35</span></div>
+      <div class="item"><span>Negro / Frutos rojos</span><span>$35</span></div>
+      <div class="item"><span>Blanco / Menta</span><span>$35</span></div>
+
+      <h2 style="margin-top:20px;">Tisanas</h2>
+      <div class="item"><span>Jengibre</span><span>$55</span></div>
+      <div class="item"><span>Frutas de verano</span><span>$55</span></div>
+      <div class="item"><span>Mango</span><span>$55</span></div>
+      <div class="item"><span>Frutos rojos</span><span>$55</span></div>
+    </div>
+
+    <div class="category">
+      <h2>Infusiones</h2>
+      <div class="item"><span>Manzanilla y aloe vera</span><span>$35</span></div>
+      <div class="item"><span>Lavanda y manzanilla</span><span>$35</span></div>
+      <div class="item"><span>Jengibre y lima</span><span>$35</span></div>
+
+      <h2 style="margin-top:20px;">Otros</h2>
+      <div class="item"><span>Pumpkin spice latte</span><span>$65</span></div>
+      <div class="item"><span>Taro latte</span><span>$65</span></div>
+      <div class="item"><span>Chai latte</span><span>$65</span></div>
+      <div class="item"><span>Matcha latte</span><span>$65</span></div>
+      <div class="item"><span>Golden Milk</span><span>$65</span></div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -74,5 +74,15 @@
     </li>
   </ul>
 
+  <script>
+    // Redirige a bebidas_calientes.html si se hace clic fuera del texto
+    document.body.addEventListener('click', function(e) {
+      // Si el clic NO es sobre un enlace ni sobre texto seleccionable
+      if (!e.target.closest('a') && e.target.tagName !== 'STRONG' && e.target.tagName !== 'SPAN' && e.target.tagName !== 'H1' && e.target.tagName !== 'LI') {
+        window.location.href = 'bebidas_calientes.html';
+      }
+    });
+  </script>
+
 </body>
 </html>
