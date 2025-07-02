@@ -155,20 +155,32 @@
 
     <script>
     // Navegación por zonas clickeables
-    document.getElementById('zona-izquierda').onclick = function(e) {
-      window.location.href = '07_paquetes_desayunos.html';
-    };
-    document.getElementById('zona-derecha').onclick = function(e) {
-      window.location.href = '09_carnes_y_aves.html';
-    };
-    // El enlace "Índice" también lleva a index.html
-    document.querySelector('.indice').setAttribute('href', 'index.html');
-    // Asegura que el contenido principal esté por encima de las zonas invisibles
-    document.querySelector('.menu-section').style.position = 'relative';
-    document.querySelector('.menu-section').style.zIndex = '20';
-    document.querySelector('h1').style.position = 'relative';
-    document.querySelector('h1').style.zIndex = '20';
-  </script>
+    var izq = document.getElementById('zona-izquierda');
+    if (izq) {
+      izq.onclick = function(e) {
+        window.location.href = '07_paquetes_desayunos.html';
+      };
+    }
+    var der = document.getElementById('zona-derecha');
+    if (der) {
+      der.onclick = function(e) {
+        window.location.href = '09_carnes_y_aves.html';
+      };
+    }
+    var indice = document.querySelector('.indice');
+    if (indice) {
+      indice.setAttribute('href', 'index.html');
+    }
+    document.querySelectorAll('.menu-section').forEach(function(section) {
+      section.style.position = 'relative';
+      section.style.zIndex = '20';
+    });
+    var h1 = document.querySelector('h1');
+    if (h1) {
+      h1.style.position = 'relative';
+      h1.style.zIndex = '20';
+    }
+    </script>
 
 
 </body>
