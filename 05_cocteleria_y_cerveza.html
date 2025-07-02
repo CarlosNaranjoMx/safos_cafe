@@ -53,16 +53,22 @@
             margin-bottom: 10px;
         }
         .menu-image {
-            width: 100%;
-            height: 200px;
-            background-color: #eee;
-            margin: 15px 0;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-        }
+    width: 100%;
+    height: 200px;
+    background-color: #eee;
+    margin: 15px 0;
+    border-radius: 5px;
+    overflow: hidden; /* Esto recorta la imagen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Recorta para llenar el contenedor */
+}
         hr {
             border: none;
             border-top: 1px solid #ddd;
@@ -72,11 +78,7 @@
             margin-left: 20px;
             margin-top: 15px;
         }
-        .menu-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
+        
     </style>
 </head>
 <body>
