@@ -58,16 +58,18 @@
             background-color: #eee;
             margin: 15px 0;
             border-radius: 5px;
+            overflow: hidden; /* Oculta el desbordamiento */
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #999;
         }
+
         .menu-img {
-            width: 100%;
-            height: auto;
-            /*object-fit: cover;  Recorta para llenar el contenedor */
+            height: 100%;        /* Escala en base al alto */
+            width: auto;         /* Mantiene proporción */
+            object-fit: cover;   /* En caso de fallback, asegura recorte */
         }
+
         hr {
             border: none;
             border-top: 1px solid #ddd;
