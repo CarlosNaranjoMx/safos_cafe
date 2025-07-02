@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postres Deliciosos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 25px;
+            background-color: #fff9f9;
+            color: #333;
+        }
+        h1 {
+            color: #8b008b;
+            text-align: center;
+            border-bottom: 2px solid #ffb6c1;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #9932cc;
+            margin-top: 35px;
+            font-size: 1.5em;
+            border-left: 4px solid #ffb6c1;
+            padding-left: 12px;
+        }
+        h3 {
+            color: #9932cc;
+            margin-top: 30px;
+            font-size: 1.3em;
+        }
+        .dessert-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #ffe4e1;
+            position: relative;
+            overflow: hidden;
+        }
+        .dessert-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .dessert-name {
+            font-weight: bold;
+            color: #8b008b;
+            font-size: 1.3em;
+        }
+        .dessert-price {
+            background-color: #9932cc;
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .dessert-desc {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95em;
+            padding-right: 10px;
+        }
+        .dessert-image {
+            width: 100%;
+            height: 220px;
+            background-color: #f9f0f5;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #ffe4e1;
+        }
+        .seasonal-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #ff69b4;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        hr {
+            border: none;
+            border-top: 1px dashed #ffb6c1;
+            margin: 30px 0;
+        }
+        .options {
+            margin-top: 10px;
+            font-style: italic;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Postres</h1>
+
+    <div class="dessert-card">
+        <div class="dessert-image" style="background-image: url('img/gelatina-yogurt.jpg')">
+            [Imagen Gelatina de yogurt]
+        </div>
+        <div class="dessert-header">
+            <h2 class="dessert-name">Gelatina de yogurt</h2>
+            <div class="dessert-price">$45</div>
+        </div>
+        <p class="dessert-desc">
+            Deliciosa gelatina con yogurt, lechera y crema decorada con nuez o granillo.
+        </p>
+    </div>
+
+    <div class="dessert-card">
+        <div class="dessert-image" style="background-image: url('img/rollos-nutella.jpg')">
+            [Imagen Rollos de nutella]
+        </div>
+        <div class="dessert-header">
+            <h2 class="dessert-name">Rollos de nutella</h2>
+            <div class="dessert-price">$89</div>
+        </div>
+        <p class="dessert-desc">
+            Deliciosos rollos de Nutella rellenos de fresa o durazno. Puedes elegir la cubierta 
+            de moka o canela. Acompañados de una bola de helado de vainilla.
+        </p>
+    </div>
+
+    <hr>
+
+    <div class="dessert-card">
+        <div class="dessert-image" style="background-image: url('img/pay-limon.jpg')">
+            [Imagen Pay de limón]
+        </div>
+        <div class="dessert-header">
+            <h3 class="dessert-name">Pay de limón</h3>
+            <div class="dessert-price">$45</div>
+        </div>
+        <p class="dessert-desc">
+            Exquisito pay de limón, hecho en casa con una base crujiente de galleta y decorado 
+            con un toque dulce de lechera y chantilly.
+        </p>
+    </div>
+
+    <div class="dessert-card">
+        <div class="seasonal-tag">TEMPORADA</div>
+        <div class="dessert-image" style="background-image: url('img/pay-mango.jpg')">
+            [Imagen Pay de mango]
+        </div>
+        <div class="dessert-header">
+            <h3 class="dessert-name">Pay de mango</h3>
+            <div class="dessert-price">$59</div>
+        </div>
+        <p class="dessert-desc">
+            Exquisito pay de mango, hecho en casa con una base crujiente de galleta y decorado 
+            con un toque dulce de lechera y chantilly. Solo por temporada.
+        </p>
+    </div>
+
+	<script>
+    // Navegación por zonas clickeables
+    document.getElementById('zona-izquierda').onclick = function(e) {
+      window.location.href = '17_crepas.html';
+    };
+    document.getElementById('zona-derecha').onclick = function(e) {
+      window.location.href = '19_postres.html';
+    };
+    // El enlace "Índice" también lleva a index.html
+    document.querySelector('.indice').setAttribute('href', 'index.html');
+    // Asegura que el contenido principal esté por encima de las zonas invisibles
+    document.querySelector('.menu-section').style.position = 'relative';
+    document.querySelector('.menu-section').style.zIndex = '20';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '20';
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Alitas y Boneless</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #e74c3c;
+            margin-top: 25px;
+            font-size: 1.3em;
+        }
+        .menu-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        .sauces-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .sauce-card {
+            background-color: #fff5f5;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: #e74c3c;
+            border: 1px solid #ffdddd;
+        }
+        .menu-item {
+            margin: 20px 0;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .item-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+        .item-price {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .item-desc {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .size-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .size-option {
+            background-color: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .price-list {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .menu-image {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        strong {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alitas y Boneless</h1>
+
+    <div class="menu-section">
+        <h2>Nuestras Salsas</h2>
+        <div class="sauces-grid">
+            <div class="sauce-card">Mango Habanero</div>
+            <div class="sauce-card">Búfalo</div>
+            <div class="sauce-card">BBQ</div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <div class="menu-image">[Imagen de Boneless]</div>
+        
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name"><strong>Boneless</strong></span>
+                <span class="item-price">$109</span>
+            </div>
+            <p class="item-desc">
+                Deliciosos trocitos de pechuga de pollo, sin hueso, empanizados y bañados en una deliciosa salsa
+            </p>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <div class="menu-image">[Imagen de Alitas]</div>
+        
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name"><strong>Alitas</strong></span>
+            </div>
+            <p class="item-desc">
+                Deliciosas alitas de pollo bañadas en nuestras ricas salsas
+            </p>
+            
+            <div class="size-options">
+                <span class="size-option">300 gr</span>
+                <span class="size-option">500 gr</span>
+                <span class="size-option">1 kg</span>
+            </div>
+            
+            <div class="price-list">
+                <div class="price-item">
+                    <span>300 gr</span>
+                    <span class="item-price">$119</span>
+                </div>
+                <div class="price-item">
+                    <span>500 gr</span>
+                    <span class="item-price">$169</span>
+                </div>
+                <div class="price-item">
+                    <span>1 kg</span>
+                    <span class="item-price">$299</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script>
+    // Navegación por zonas clickeables
+    document.getElementById('zona-izquierda').onclick = function(e) {
+      window.location.href = '14_hamburguesas.html';
+    };
+    document.getElementById('zona-derecha').onclick = function(e) {
+      window.location.href = '16_crepas.html';
+    };
+    // El enlace "Índice" también lleva a index.html
+    document.querySelector('.indice').setAttribute('href', 'index.html');
+    // Asegura que el contenido principal esté por encima de las zonas invisibles
+    document.querySelector('.menu-section').style.position = 'relative';
+    document.querySelector('.menu-section').style.zIndex = '20';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '20';
+  </script>
+
+
+
+</body>
+</html>

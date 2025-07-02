@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crepas Premium</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 25px;
+            background-color: #fdf5e6;
+            color: #333;
+        }
+        h1 {
+            color: #8b4513;
+            text-align: center;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #a0522d;
+            margin-top: 35px;
+            font-size: 1.5em;
+            border-left: 4px solid #d2b48c;
+            padding-left: 12px;
+        }
+        .crepe-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #eee8dc;
+            position: relative;
+            overflow: hidden;
+        }
+        .crepe-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .crepe-name {
+            font-weight: bold;
+            color: #8b4513;
+            font-size: 1.3em;
+        }
+        .crepe-price {
+            background-color: #a0522d;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .crepe-desc {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95em;
+            padding-right: 10px;
+        }
+        .crepe-image {
+            width: 100%;
+            height: 220px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #eee8dc;
+        }
+        .decoration {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background-color: #f0e68c;
+            transform: rotate(45deg) translate(25px, -15px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b4513;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crepas Premium</h1>
+
+    <div class="crepe-card">
+        <div class="decoration">Premium</div>
+        <div class="crepe-image" style="background-image: url('img/crepa-kinder.jpg')">
+            [Imagen Kinder Sorpresa]
+        </div>
+        <div class="crepe-header">
+            <h2 class="crepe-name">Kinder Sorpresa</h2>
+            <div class="crepe-price">$139</div>
+        </div>
+        <p class="crepe-desc">
+            Deliciosa crepa rellena de fresas con helado de vainilla y galleta oreo, 
+            bañada con nutella decorada con huevo kínder.
+        </p>
+    </div>
+
+    <div class="crepe-card">
+        <div class="decoration">Premium</div>
+        <div class="crepe-image" style="background-image: url('img/crepa-pollito.jpg')">
+            [Imagen Pollito crispy]
+        </div>
+        <div class="crepe-header">
+            <h2 class="crepe-name">Pollito crispy</h2>
+            <div class="crepe-price">$159</div>
+        </div>
+        <p class="crepe-desc">
+            Deliciosa crepa rellena de boneless con quesos gratinados, bañada con nuestra 
+            salsa búfalo y un toque de aderezo ranch.
+        </p>
+    </div>
+
+    <div class="crepe-card">
+        <div class="decoration">Premium</div>
+        <div class="crepe-image" style="background-image: url('img/crepa-hawaian.jpg')">
+            [Imagen Hawaian Bacon]
+        </div>
+        <div class="crepe-header">
+            <h2 class="crepe-name">Hawaian Bacon</h2>
+            <div class="crepe-price">$119</div>
+        </div>
+        <p class="crepe-desc">
+            Deliciosa crepa rellena de fresas con helado de Fresa y café con cubierta de 
+            chocolate líquido decorada con conejito turín.
+        </p>
+    </div>
+
+    <div class="crepe-card">
+        <div class="decoration">Premium</div>
+        <div class="crepe-image" style="background-image: url('img/crepa-fogata.jpg')">
+            [Imagen Fogata]
+        </div>
+        <div class="crepe-header">
+            <h2 class="crepe-name">Fogata</h2>
+            <div class="crepe-price">$129</div>
+        </div>
+        <p class="crepe-desc">
+            Deliciosa crepa hawaiana acompañada con tocino, gratinada con queso mozzarella 
+            y queso manchego, bañada con nuestra salsa de la casa.
+        </p>
+        <p class="crepe-desc">
+            Deliciosa crepa rellena de durazno con helado de Chocolate y Galleta con cubierta 
+            de lechera decorada con nuez y chocolate Kit Kat.
+        </p>
+    </div>
+
+	<script>
+    // Navegación por zonas clickeables
+    document.getElementById('zona-izquierda').onclick = function(e) {
+      window.location.href = '15_alitas.html';
+    };
+    document.getElementById('zona-derecha').onclick = function(e) {
+      window.location.href = '17_crepas.html';
+    };
+    // El enlace "Índice" también lleva a index.html
+    document.querySelector('.indice').setAttribute('href', 'index.html');
+    // Asegura que el contenido principal esté por encima de las zonas invisibles
+    document.querySelector('.menu-section').style.position = 'relative';
+    document.querySelector('.menu-section').style.zIndex = '20';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '20';
+  </script>
+
+
+
+</body>
+</html>

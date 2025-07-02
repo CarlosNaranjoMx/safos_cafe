@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú de Paquetes Desayunos</title>
+    <title>Menú de Entradas</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -24,6 +24,11 @@
             margin-top: 30px;
             border-left: 4px solid #e74c3c;
             padding-left: 10px;
+        }
+        h3 {
+            color: #e74c3c;
+            margin-top: 20px;
+            font-size: 1.2em;
         }
         .menu-section {
             background-color: white;
@@ -46,11 +51,11 @@
             color: #e74c3c;
         }
         .item-description {
-            font-style: italic;
             color: #7f8c8d;
             font-size: 0.9em;
             width: 100%;
             margin-bottom: 10px;
+            line-height: 1.5;
         }
         .menu-image {
             width: 100%;
@@ -72,126 +77,83 @@
             margin-left: 20px;
             margin-top: 10px;
         }
-        .included {
-            background-color: #f0f8ff;
-            padding: 10px;
-            border-radius: 5px;
+        .salad-option {
             margin-bottom: 15px;
-            font-size: 0.9em;
         }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 5px;
+        .check-mark {
+            color: #2ecc71;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <h1>Paquetes Desayunos</h1>
-
-    <div class="included">
-        <p>Todos los desayunos incluyen café de refil. Además puede elegir entre agua del día o fruta.</p>
-    </div>
+    <h1>Entradas</h1>
 
     <div class="menu-section">
-        <h2>Huevos al gusto</h2>
-        <div class="menu-image">[Imagen de huevos al gusto]</div>
+        <h2>Sopa Azteca</h2>
+        <div class="menu-image">[Imagen de Sopa Azteca]</div>
         
         <div class="menu-item">
-            <span class="item-name"></span>
-            <span class="item-price">$129</span>
+            <span class="item-price">$69</span>
         </div>
         
-        <p>Huevos con:</p>
-        <ul>
-            <li>Jamón</li>
-            <li>A la mexicana</li>
-            <li>Tocino</li>
-            <li>Divorciados</li>
-            <li>Chorizo</li>
-            <li>Rancheros</li>
-        </ul>
+        <p class="item-description">
+            Sopa tradicional mexicana con crujientes tiras de tortilla, chicharrón, aguacate, 
+            trozos de queso panela, y un toque de chile guajillo.
+        </p>
     </div>
 
     <hr>
 
     <div class="menu-section">
-        <h2>Omelette</h2>
-        <div class="menu-image">[Imagen de omelette]</div>
+        <h3>Ensaladas</h3>
+        <div class="menu-image">[Imagen de Ensaladas]</div>
         
         <div class="menu-item">
-            <span class="item-name"></span>
-            <span class="item-price">$129</span>
+            <span class="item-price">$89</span>
         </div>
         
-        <ul>
-            <li>Omelette con jamón y quesillo</li>
-            <li>Omelette con espinaca y quesillo</li>
-        </ul>
-    </div>
-
-    <hr>
-
-    <div class="menu-section">
-        <h2>Chilaquiles</h2>
-        <div class="menu-image">[Imagen de chilaquiles]</div>
+        <div class="salad-option">
+            <div class="item-name">Ensalada de manzana</div>
+            <p class="item-description">
+                Refrescante mezcla de lechugas con crujiente manzana verde, nuez caramelizada 
+                y suaves cubos de queso panela, acompañado de un dulce aderezo con arándanos 
+                a base de miel.
+            </p>
+        </div>
         
-        <p class="item-description">Verdes o rojos</p>
-        
-        <div class="menu-item">
-            <span class="item-name">Pollo</span>
-            <span class="item-price">$139</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Huevo</span>
-            <span class="item-price">$139</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Chorizo</span>
-            <span class="item-price">$139</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Bistec</span>
-            <span class="item-price">$149</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Milanesa</span>
-            <span class="item-price">$159</span>
+        <div class="salad-option">
+            <div class="item-name">Ensalada de pollo</div>
+            <p class="item-description">
+                Deliciosa mezcla de lechugas frescas con crujientes crotones y jugosas tiras 
+                de pollo. Acompañada de un delicioso aderezo cítrico.
+            </p>
         </div>
     </div>
 
     <hr>
 
     <div class="menu-section">
-        <h2>Enfrijoladas</h2>
-        <div class="menu-image">[Imagen de enfrijoladas]</div>
+        <h3>Para acompañar</h3>
+        <div class="menu-image">[Imagen de Acompañamientos]</div>
         
         <div class="menu-item">
-            <span class="item-name">Pollo, chorizo o jamón</span>
-            <span class="item-price">$139</span>
+            <span class="item-name"><span class="check-mark">✔</span> Papas a la francesa</span>
+            <span class="item-price">$59</span>
         </div>
         <div class="menu-item">
-            <span class="item-name">Veracruzanas</span>
-            <span class="item-price">$155</span>
-        </div>
-        
-        <div class="sub-section">
-            <p>Rellenas de huevo a la mexicana con chorizo, crema, queso y cebolla morada</p>
+            <span class="item-name"><span class="check-mark">✔</span> Dedos de queso</span>
+            <span class="item-price">$99</span>
         </div>
     </div>
 
-		<!-- Áreas de navegación invisibles -->
-  <div id="zona-izquierda" style="position:fixed;top:0;left:0;width:50vw;height:100vh;z-index:10;"></div>
-  <div id="zona-derecha" style="position:fixed;top:0;right:0;width:50vw;height:100vh;z-index:10;"></div>
-
-  <script>
+	<script>
     // Navegación por zonas clickeables
     document.getElementById('zona-izquierda').onclick = function(e) {
-      window.location.href = '05_cocteleria_y_cerveza.html';
+      window.location.href = '07_paquetes_desayunos.html';
     };
     document.getElementById('zona-derecha').onclick = function(e) {
-      window.location.href = '07_paquetes_desayunos.html';
+      window.location.href = '09_carnes_y_aves.html';
     };
     // El enlace "Índice" también lleva a index.html
     document.querySelector('.indice').setAttribute('href', 'index.html');

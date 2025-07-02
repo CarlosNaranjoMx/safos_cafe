@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comidas al estilo mexicano</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #e74c3c;
+            margin-top: 30px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 10px;
+        }
+        .menu-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .item-price {
+            color: #e74c3c;
+        }
+        .item-description {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            width: 100%;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .menu-image {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            margin: 15px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        .option-group {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comidas al estilo mexicano</h1>
+
+    <div class="menu-section">
+        <h2>Molletes</h2>
+        <div class="menu-image">[Imagen de Molletes]</div>
+        
+        <div class="option-group">
+            <div class="menu-item">
+                <span class="item-name">Tradicionales</span>
+                <span class="item-price">$69</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Bistec</span>
+                <span class="item-price">$99</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Chorizo</span>
+                <span class="item-price">$79</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Tocino</span>
+                <span class="item-price">$79</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Pollo</span>
+                <span class="item-price">$85</span>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="menu-section">
+        <h2>Tacos Dorados</h2>
+        <div class="menu-image">[Imagen de Tacos Dorados]</div>
+        
+        <div class="option-group">
+            <div class="menu-item">
+                <span class="item-name">Pollo</span>
+                <span class="item-price">$89</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Queso oaxaca</span>
+                <span class="item-price">$89</span>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="menu-section">
+        <h2>Chilaquiles</h2>
+        <div class="menu-image">[Imagen de Chilaquiles]</div>
+        
+        <p class="item-description">
+            Totopos bañados en salsa verde o roja con crema, queso, cebolla morada, 
+            acompañados de frijoles
+        </p>
+        
+        <div class="option-group">
+            <div class="menu-item">
+                <span class="item-name">Pollo</span>
+                <span class="item-price">$99</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Huevo</span>
+                <span class="item-price">$99</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Chorizo</span>
+                <span class="item-price">$99</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Bistec</span>
+                <span class="item-price">$119</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Milanesa</span>
+                <span class="item-price">$129</span>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="menu-section">
+        <h2>Enchiladas</h2>
+        <div class="menu-image">[Imagen de Enchiladas]</div>
+        
+        <div class="option-group">
+            <div class="menu-item">
+                <span class="item-name">Verdes o rojas</span>
+                <span class="item-price">$99</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Suizas</span>
+                <span class="item-price">$115</span>
+            </div>
+        </div>
+    </div>
+
+	<script>
+    // Navegación por zonas clickeables
+    document.getElementById('zona-izquierda').onclick = function(e) {
+      window.location.href = '09_carnes_y_aves.html';
+    };
+    document.getElementById('zona-derecha').onclick = function(e) {
+      window.location.href = '11_tortilla_de_harina.html';
+    };
+    // El enlace "Índice" también lleva a index.html
+    document.querySelector('.indice').setAttribute('href', 'index.html');
+    // Asegura que el contenido principal esté por encima de las zonas invisibles
+    document.querySelector('.menu-section').style.position = 'relative';
+    document.querySelector('.menu-section').style.zIndex = '20';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '20';
+  </script>
+
+</body>
+</html>

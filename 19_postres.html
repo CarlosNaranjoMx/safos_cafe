@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postres Exquisitos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 25px;
+            background-color: #fff9f9;
+            color: #333;
+        }
+        h1 {
+            color: #8b008b;
+            text-align: center;
+            border-bottom: 2px solid #ffb6c1;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-size: 2.2em;
+        }
+        .dessert-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .dessert-table td {
+            padding: 20px;
+            vertical-align: top;
+            border: 1px solid #ffe4e1;
+            background-color: white;
+        }
+        .dessert-header {
+            font-weight: bold;
+            color: #8b008b;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .dessert-price {
+            color: #9932cc;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin: 10px 0;
+        }
+        .dessert-desc {
+            color: #666;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+        .dessert-image {
+            width: 100%;
+            height: 150px;
+            background-color: #f9f0f5;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #ffe4e1;
+        }
+        @media (max-width: 600px) {
+            .dessert-table, .dessert-table tbody, .dessert-table tr, .dessert-table td {
+                display: block;
+                width: 100%;
+            }
+            .dessert-table td {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Postres</h1>
+
+    <table class="dessert-table">
+        <tr>
+            <td>
+                <span class="dessert-header">Pay de queso con zarzamora</span>
+                <div class="dessert-price">$59</div>
+                <div class="dessert-image">[Imagen Pay de queso]</div>
+                <p class="dessert-desc">
+                    Exquisito pay de queso con zarzamora con una base crujiente de galleta.
+                </p>
+            </td>
+            <td>
+                <span class="dessert-header">Flan Napolitano</span>
+                <div class="dessert-price">$59</div>
+                <div class="dessert-image">[Imagen Flan Napolitano]</div>
+                <p class="dessert-desc">
+                    Exquisito Flan napolitano hecho en casa
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="dessert-header">Galletas de chocochispas</span>
+                <div class="dessert-price">$20</div>
+                <div class="dessert-image">[Imagen Galletas]</div>
+                <p class="dessert-desc">
+                    Suaves galletas recién horneadas en casa con irresistibles chispas de chocolate
+                </p>
+            </td>
+            <td>
+                <span class="dessert-header">Roles de canela</span>
+                <div class="dessert-price">$30</div>
+                <div class="dessert-image">[Imagen Roles de canela]</div>
+                <p class="dessert-desc">
+                    Esponjoso rol de canela con azúcar glaseada, un toque de chocolate líquido y granillo, bañado en leche.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+	<script>
+    // Navegación por zonas clickeables
+    document.getElementById('zona-izquierda').onclick = function(e) {
+      window.location.href = '17_crepas.html';
+    };
+    // document.getElementById('zona-derecha').onclick = function(e) {
+    //   window.location.href = '19_postres.html';
+    // };
+    // El enlace "Índice" también lleva a index.html
+    document.querySelector('.indice').setAttribute('href', 'index.html');
+    // Asegura que el contenido principal esté por encima de las zonas invisibles
+    document.querySelector('.menu-section').style.position = 'relative';
+    document.querySelector('.menu-section').style.zIndex = '20';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '20';
+  </script>
+
+
+</body>
+</html>

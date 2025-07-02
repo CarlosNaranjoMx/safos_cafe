@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con tortilla de harina</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #e74c3c;
+            margin-top: 30px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 10px;
+        }
+        .menu-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .item-price {
+            color: #e74c3c;
+        }
+        .item-description {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            width: 100%;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .menu-image {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            margin: 15px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        .option-group {
+            margin-left: 20px;
+        }
+        .index {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+            margin: 20px 0;
+        }
+        strong {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Con tortilla de harina</h1>
+
+    <div class="index">
+        <strong>Índice</strong>
+    </div>
+
+    <div class="menu-section">
+        <h2>Wrap</h2>
+        <div class="menu-image">[Imagen de Wrap]</div>
+        
+        <div class="menu-item">
+            <span class="item-price">$99</span>
+        </div>
+        
+        <p class="item-description">
+            Deliciosa variante del burrito relleno de un mix de lechugas, quesos, jitomate, 
+            pollo o atún, y aderezo a elegir.
+        </p>
+    </div>
+
+    <hr>
+
+    <div class="menu-section">
+        <h2>Burritos</h2>
+        <div class="menu-image">[Imagen de Burritos]</div>
+        
+        <p class="item-description">
+            Delicioso burrito con una base de frijoles relleno de lechuga, aguacate, quesillo 
+            y proteína a elegir. Acompañado de guacamole y papas a la francesa.
+        </p>
+        
+        <div class="option-group">
+            <div class="menu-item">
+                <span class="item-name">Campechano (longaniza con bistec)</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Bistec</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Pechuga</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Longaniza</span>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="menu-section">
+        <h2>Sincronizadas</h2>
+        <div class="menu-image">[Imagen de Sincronizadas]</div>
+        
+        <div class="menu-item">
+            <span class="item-price">$65</span>
+        </div>
+        
+        <p class="item-description">
+            Delicioso platillo mexicano elaborado con tortilla de harina, rellenas de queso 
+            amarillo derretido, jamón, mayonesa, queso oaxaca y aguacate.
+        </p>
+    </div>
+
+    <script>
+    // Navegación por zonas clickeables
+    document.getElementById('zona-izquierda').onclick = function(e) {
+      window.location.href = '10_comida_mexicana.html';
+    };
+    document.getElementById('zona-derecha').onclick = function(e) {
+      window.location.href = '12_sandwiches.html';
+    };
+    // El enlace "Índice" también lleva a index.html
+    document.querySelector('.indice').setAttribute('href', 'index.html');
+    // Asegura que el contenido principal esté por encima de las zonas invisibles
+    document.querySelector('.menu-section').style.position = 'relative';
+    document.querySelector('.menu-section').style.zIndex = '20';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '20';
+  </script>
+
+</body>
+</html>

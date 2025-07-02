@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crepas y Hot cakes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 25px;
+            background-color: #fff9f0;
+            color: #333;
+        }
+        h1 {
+            color: #8b4513;
+            text-align: center;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+        h2 {
+            color: #a0522d;
+            margin-top: 30px;
+            font-size: 1.4em;
+            border-left: 4px solid #d2b48c;
+            padding-left: 12px;
+        }
+        h3 {
+            color: #a0522d;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .menu-note {
+            background-color: #fff5e6;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 25px;
+            border: 1px dashed #d2b48c;
+        }
+        .category-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border: 1px solid #eee8dc;
+        }
+        .price-tag {
+            background-color: #a0522d;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .item-list {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        .item {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 15px;
+        }
+        .item:before {
+            content: "•";
+            color: #d2b48c;
+            position: absolute;
+            left: 0;
+        }
+        .special-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .special-item {
+            background-color: #fff5e6;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #eee8dc;
+        }
+        .special-name {
+            font-weight: bold;
+            color: #8b4513;
+        }
+        .special-price {
+            color: #a0522d;
+            font-weight: bold;
+            float: right;
+        }
+        .menu-image {
+            width: 100%;
+            height: 180px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            border: 1px solid #eee8dc;
+        }
+        .subcategory {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crepas y Hot cakes</h1>
+
+    <div class="menu-note">
+        Todas nuestras crepas dulces llevan queso crema, granillo de chocolate, chantilly, 
+        chocolate líquido y azúcar glass
+    </div>
+
+    <div class="category-card">
+        <h2>Sencillas</h2>
+        <div class="price-tag">$69</div>
+        <div class="menu-image">[Imagen Crepas Sencillas]</div>
+        
+        <h3>Lechera</h3>
+        <div class="item-list">
+            <div class="item">Cajeta</div>
+            <div class="item">Nutella</div>
+            <div class="item">Chocolate</div>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <h2>Frutales</h2>
+        <div class="price-tag">$79</div>
+        <div class="menu-image">[Imagen Crepas Frutales]</div>
+        
+        <p>Puedes elegir una jalea y una fruta</p>
+        <div class="item-list">
+            <div class="item">Fresa</div>
+            <div class="item">Durazno</div>
+            <div class="item">Mix de frutos rojos</div>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <h2>Especiales</h2>
+        <div class="price-tag">$99</div>
+        <div class="menu-image">[Imagen Crepas Especiales]</div>
+        
+        <p>Puedes elegir una jalea, una fruta y el chocolate</p>
+        <div class="special-items">
+            <div class="special-item">
+                <span class="special-name">Nuevo kinder</span>
+                <span class="special-price">$109</span>
+            </div>
+            <div class="special-item">
+                <span class="special-name">Conejito Turín</span>
+                <span class="special-price">$99</span>
+            </div>
+            <div class="special-item">
+                <span class="special-name">Ferrero</span>
+                <span class="special-price">$99</span>
+            </div>
+            <div class="special-item">
+                <span class="special-name">Kit Kat</span>
+                <span class="special-price">$99</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <h2>Crepas Saladas</h2>
+        <div class="price-tag">$70</div>
+        <div class="menu-image">[Imagen Crepas Saladas]</div>
+        
+        <p>Todas nuestras crepas saladas llevan salsa para pizza, queso mozzarella y papas tipo chips</p>
+        <div class="item-list">
+            <div class="item">Hawaiana</div>
+            <div class="item">Pepperoni</div>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <h2>Hot cakes</h2>
+        <div class="price-tag">$59</div>
+        <div class="menu-image">[Imagen Hot cakes]</div>
+        
+        <div class="subcategory">
+            <h3>Clásicos: (3 pzs)</h3>
+            <div class="item-list">
+                <div class="item">Bañados en miel maple</div>
+            </div>
+        </div>
+        
+        <div class="subcategory">
+            <h3>Especiales: (3 pzs)</h3>
+            <div class="item-list">
+                <div class="item">Fruta a elegir</div>
+                <div class="item">Jalea a elegir</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <h2>Extras</h2>
+        <div class="price-tag">$25</div>
+        <div class="menu-image">[Imagen Extras]</div>
+        
+        <h3>Bola de helado:</h3>
+        <div class="item-list">
+            <div class="item">Chocolate</div>
+            <div class="item">Galleta</div>
+            <div class="item">Vainilla</div>
+            <div class="item">Fresa</div>
+            <div class="item">Nuez</div>
+            <div class="item">Cereza</div>
+            <div class="item">Galleta de barquillo</div>
+        </div>
+    </div>
+
+	<script>
+    // Navegación por zonas clickeables
+    document.getElementById('zona-izquierda').onclick = function(e) {
+      window.location.href = '16_crepas.html';
+    };
+    document.getElementById('zona-derecha').onclick = function(e) {
+      window.location.href = '18_postres.html';
+    };
+    // El enlace "Índice" también lleva a index.html
+    document.querySelector('.indice').setAttribute('href', 'index.html');
+    // Asegura que el contenido principal esté por encima de las zonas invisibles
+    document.querySelector('.menu-section').style.position = 'relative';
+    document.querySelector('.menu-section').style.zIndex = '20';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '20';
+  </script>
+
+
+</body>
+</html>
