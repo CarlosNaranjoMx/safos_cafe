@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Índice del Menú</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #000000, #c48c00);
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    ul {
+      list-style-type: disc;
+    }
+    .section {
+      margin-top: 1em;
+    }
+    .submenu {
+      list-style: none;
+      padding-left: 1.5em;
+    }
+    .submenu li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted #ccc;
+      margin-bottom: 4px;
+    }
+    .submenu a {
+      color: white;
+      text-decoration: none;
+    }
+    .submenu a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Índice</h1>
+
+  <ul>
+    <li class="section"><strong>Bebidas</strong>
+      <ul class="submenu">
+        <li><a href="#">Bebidas calientes</a><span>3</span></li>
+        <li><a href="#">Bebidas frías con leche</a><span>4</span></li>
+        <li><a href="#">Bebidas frías</a><span>5</span></li>
+      </ul>
+    </li>
+
+    <li class="section"><strong>Desayunos</strong>
+      <ul class="submenu">
+        <li><a href="#">Paquetes Desayunos</a><span>7</span></li>
+      </ul>
+    </li>
+
+    <li class="section"><strong>Menú del día</strong>
+      <ul class="submenu">
+        <li><a href="#">Entradas</a><span>9</span></li>
+        <li><a href="#">Carnes y Aves</a><span>10</span></li>
+        <li><a href="#">Comidas al estilo mexicano</a><span>11</span></li>
+        <li><a href="#">Con tortilla de harina</a><span>12</span></li>
+        <li><a href="#">Sándwiches</a><span>13</span></li>
+        <li><a href="#">Pizzas</a><span>14</span></li>
+        <li><a href="#">Hamburguesas</a><span>15</span></li>
+        <li><a href="#">Alitas y boneless</a><span>16</span></li>
+        <li><a href="#">Crepas Premium</a><span>17</span></li>
+        <li><a href="#">Crepas y Hot cakes</a><span>18</span></li>
+        <li><a href="#">Postres</a><span>19</span></li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Enlace invisible que cubre toda el área fuera del menú -->
+  <a id="enlace-fondo" href="bebidas_calientes.html" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:1;opacity:0;cursor:pointer;"></a>
+
+  <script>
+    // El enlace invisible debe estar detrás del contenido interactivo
+    document.getElementById('enlace-fondo').style.zIndex = '1';
+    // El menú y el contenido deben estar por encima
+    document.querySelector('ul').style.position = 'relative';
+    document.querySelector('ul').style.zIndex = '2';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '2';
+    // Evita que el enlace invisible capture clics sobre el menú
+    document.querySelector('ul').addEventListener('click', function(e) { e.stopPropagation(); });
+    document.querySelector('h1').addEventListener('click', function(e) { e.stopPropagation(); });
+  </script>
+
+</body>
+</html>

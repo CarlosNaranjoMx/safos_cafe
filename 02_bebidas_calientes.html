@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebidas Calientes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #e74c3c;
+            margin-top: 30px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 10px;
+        }
+        .menu-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .item-price {
+            color: #e74c3c;
+        }
+        .item-description {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .menu-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to bottom, #e6d3b3, #b38b6d);
+            margin: 15px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            overflow: hidden;
+        }
+        .menu-img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        .sub-section {
+            margin-left: 20px;
+            margin-top: 15px;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        .flavor-options {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bebidas Calientes</h1>
+
+    <div class="menu-section">
+        <h2>Café</h2>
+        <div class="menu-image">
+            <img src="img/cafe.jpg" alt="Variedades de café" class="menu-img">
+        </div>
+        
+        <div class="menu-item">
+            <span class="item-name">Americano</span>
+            <span class="item-price">$40</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Espresso</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Macchiato</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Chocolate caliente</span>
+            <span class="item-price">$50</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Latte</span>
+            <span class="item-price">$60</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Moka / Moka blanco</span>
+            <span class="item-price">$63</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Capuccino clásico</span>
+            <span class="item-price">$55</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Capruccino baileys</span>
+            <span class="item-price">$85</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Capuccino con sabor</span>
+            <span class="item-price">$63</span>
+        </div>
+        
+        <div class="flavor-options">
+            (vainilla, nuez, cajeta, chocochispas, canela, chocolate blanco y fresa)
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="menu-section">
+        <h2>Otros</h2>
+        <div class="menu-image">
+            <img src="img/especiales.jpg" alt="Bebidas especiales" class="menu-img">
+        </div>
+        
+        <div class="menu-item">
+            <span class="item-name">Pumpkin spice latte</span>
+            <span class="item-price">$65</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Taro latte</span>
+            <span class="item-price">$65</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Chai latte</span>
+            <span class="item-price">$65</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Matcha latte</span>
+            <span class="item-price">$65</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Golden Milk</span>
+            <span class="item-price">$65</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="menu-section">
+        <h2>Té / Infusión</h2>
+        <div class="menu-image">
+            <img src="img/te.jpg" alt="Variedades de té" class="menu-img">
+        </div>
+        
+        <div class="menu-item">
+            <span class="item-name">Verde / Limón</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Negro / Frutos rojos</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Blanco / Menta</span>
+            <span class="item-price">$35</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="menu-section">
+        <h2>Tisanas</h2>
+        <div class="menu-image">
+            <img src="img/tisanas.jpg" alt="Tisanas" class="menu-img">
+        </div>
+        
+        <div class="menu-item">
+            <span class="item-name">Jengibre</span>
+            <span class="item-price">$55</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Frutas de verano</span>
+            <span class="item-price">$55</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Mango</span>
+            <span class="item-price">$55</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Frutos rojos</span>
+            <span class="item-price">$55</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="menu-section">
+        <h2>Infusiones</h2>
+        <div class="menu-image">
+            <img src="img/infusiones.jpg" alt="Infusiones" class="menu-img">
+        </div>
+        
+        <div class="menu-item">
+            <span class="item-name">Manzanilla y aloe vera</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Lavanda y manzanilla</span>
+            <span class="item-price">$35</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Jengibre y lima</span>
+            <span class="item-price">$35</span>
+        </div>
+    </div>
+
+	<!-- Áreas de navegación invisibles -->
+  <div id="zona-izquierda" style="position:fixed;top:0;left:0;width:50vw;height:100vh;z-index:10;"></div>
+  <div id="zona-derecha" style="position:fixed;top:0;right:0;width:50vw;height:100vh;z-index:10;"></div>
+
+  <script>
+    // Navegación por zonas clickeables
+    document.getElementById('zona-izquierda').onclick = function(e) {
+      window.location.href = 'index.html';
+    };
+    document.getElementById('zona-derecha').onclick = function(e) {
+      window.location.href = '03_bebidas_frias.html';
+    };
+    // El enlace "Índice" también lleva a index.html
+    document.querySelector('.indice').setAttribute('href', 'index.html');
+    // Asegura que el contenido principal esté por encima de las zonas invisibles
+    document.querySelector('.menu-section').style.position = 'relative';
+    document.querySelector('.menu-section').style.zIndex = '20';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '20';
+  </script>
+
+
+
+
+</body>
+</html>
