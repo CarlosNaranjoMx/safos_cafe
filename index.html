@@ -14,7 +14,7 @@
         }
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 20px;
             margin-top: 30px;
         }
@@ -24,6 +24,14 @@
             padding: 15px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             border: 1px solid #ddd;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         .category-title {
             font-weight: bold;
@@ -41,15 +49,29 @@
             align-items: center;
             justify-content: center;
             color: #999;
+            overflow: hidden;
         }
         .page-number {
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-top: 5px;
+            font-size: 0.85em;
             color: #666;
-            font-size: 0.9em;
         }
         h1 {
             color: #333;
             text-align: center;
             margin-bottom: 30px;
+        }
+        .section-title {
+            grid-column: 1 / -1;
+            font-size: 1.3em;
+            color: #444;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -57,103 +79,108 @@
     <h1>Índice del Menú</h1>
 
     <div class="container">
-        <!-- Bebidas -->
-        <div class="category-card">
+        <div class="section-title">Bebidas</div>
+        
+        <a href="02_bebidas_calientes.html" class="category-card">
             <div class="category-image">[Imagen Bebidas Calientes]</div>
             <div class="category-title">Bebidas calientes</div>
             <div class="page-number">Página 3</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="03_bebidas_frias.html" class="category-card">
             <div class="category-image">[Imagen Bebidas Frías con Leche]</div>
             <div class="category-title">Bebidas frías con leche</div>
             <div class="page-number">Página 4</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="04_bebidas_frias.html" class="category-card">
             <div class="category-image">[Imagen Bebidas Frías]</div>
             <div class="category-title">Bebidas frías</div>
             <div class="page-number">Página 5</div>
-        </div>
+        </a>
 
-        <!-- Desayunos -->
-        <div class="category-card">
+        <a href="05_cocteleria_y_cerveza.html" class="category-card">
+            <div class="category-image">[Imagen Coctelería]</div>
+            <div class="category-title">Coctelería y cerveza</div>
+            <div class="page-number">-</div>
+        </a>
+
+        <div class="section-title">Desayunos</div>
+        
+        <a href="06_paquetes_desayunos.html" class="category-card">
             <div class="category-image">[Imagen Paquetes Desayunos]</div>
             <div class="category-title">Paquetes Desayunos</div>
             <div class="page-number">Página 7</div>
-        </div>
+        </a>
 
-        <!-- Menú del día -->
-        <div class="category-card">
+        <div class="section-title">Menú del día</div>
+        
+        <a href="08_entradas.html" class="category-card">
             <div class="category-image">[Imagen Entradas]</div>
             <div class="category-title">Entradas</div>
             <div class="page-number">Página 9</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="09_carnes_y_aves.html" class="category-card">
             <div class="category-image">[Imagen Carnes y Aves]</div>
             <div class="category-title">Carnes y Aves</div>
             <div class="page-number">Página 10</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="10_comida_mexicana.html" class="category-card">
             <div class="category-image">[Imagen Comidas Mexicanas]</div>
             <div class="category-title">Comidas al estilo mexicano</div>
             <div class="page-number">Página 11</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="11_tortilla_de_harina.html" class="category-card">
             <div class="category-image">[Imagen Tortilla de Harina]</div>
             <div class="category-title">Con tortilla de harina</div>
             <div class="page-number">Página 12</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="12_sandwiches.html" class="category-card">
             <div class="category-image">[Imagen Sándwiches]</div>
             <div class="category-title">Sándwiches</div>
             <div class="page-number">Página 13</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="13_pizzas.html" class="category-card">
             <div class="category-image">[Imagen Pizzas]</div>
             <div class="category-title">Pizzas</div>
             <div class="page-number">Página 14</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="14_hamburguesas.html" class="category-card">
             <div class="category-image">[Imagen Hamburguesas]</div>
             <div class="category-title">Hamburguesas</div>
             <div class="page-number">Página 15</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="15_alitas.html" class="category-card">
             <div class="category-image">[Imagen Alitas]</div>
             <div class="category-title">Alitas y boneless</div>
             <div class="page-number">Página 16</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="16_crepas.html" class="category-card">
             <div class="category-image">[Imagen Crepas Premium]</div>
             <div class="category-title">Crepas Premium</div>
             <div class="page-number">Página 17</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="17_crepas.html" class="category-card">
             <div class="category-image">[Imagen Hot Cakes]</div>
             <div class="category-title">Crepas y Hot cakes</div>
             <div class="page-number">Página 18</div>
-        </div>
+        </a>
 
-        <div class="category-card">
+        <a href="18_postres.html" class="category-card">
             <div class="category-image">[Imagen Postres]</div>
             <div class="category-title">Postres</div>
             <div class="page-number">Página 19</div>
-        </div>
+        </a>
     </div>
-
-    <!-- Áreas de navegación invisibles -->
-  <div id="zona-izquierda" style="position:fixed;top:0;left:0;width:50vw;height:100vh;z-index:10;"></div>
-  <div id="zona-derecha" style="position:fixed;top:0;right:0;width:50vw;height:100vh;z-index:10;"></div>
 
   <script>
     // Navegación por zonas clickeables
@@ -171,9 +198,6 @@
     document.querySelector('h1').style.position = 'relative';
     document.querySelector('h1').style.zIndex = '20';
   </script>
-
-
-
 
 </body>
 </html>
