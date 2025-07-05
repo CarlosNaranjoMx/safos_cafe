@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bebidas frías con leche</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #000000, #c48c00);
+      color: white;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 10px;
+    }
+    .indice {
+      background: hotpink;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 10px;
+      float: right;
+      text-decoration: none;
+    }
+    .note {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+    .menu-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .category {
+      flex: 1 1 250px;
+    }
+    .category h2 {
+      border-bottom: 1px solid white;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    .item {
+      display: flex;
+      justify-content: space-between;
+      margin: 4px 0;
+    }
+    .desc {
+      font-size: 0.9em;
+      font-style: italic;
+      color: #ffe;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bebidas frías con leche <a href="#" class="indice">Índice</a></h1>
+  <p class="note">Puedes elegir leche entera, deslactosada o por $15 más de almendra</p>
+
+  <div class="menu-section">
+
+    <div class="category">
+      <h2>Frappés</h2>
+      <div class="item"><span>Caramel</span><span>$87</span></div>
+      <div class="item"><span>Chocolate Blanco</span><span>$87</span></div>
+      <div class="item"><span>Cookies & cream</span><span>$87</span></div>
+      <div class="item"><span>Pumpkin spice</span><span>$83</span></div>
+      <div class="item"><span>Frappé de café</span><span>$83</span></div>
+      <div class="item"><span>Chocolate</span><span>$83</span></div>
+      <div class="item"><span>Moka</span><span>$83</span></div>
+      <div class="item"><span>Taro</span><span>$83</span></div>
+      <div class="item"><span>Matcha</span><span>$83</span></div>
+    </div>
+
+    <div class="category">
+      <h2>Malteadas</h2>
+      <div class="desc">
+        Decoradas con crema batida, chocolate líquido, granillo de chocolate y cereza
+      </div>
+      <div class="item"><span>Chocolate</span><span>$75</span></div>
+      <div class="item"><span>Vainilla</span><span>$75</span></div>
+      <div class="item"><span>Fresa</span><span>$75</span></div>
+      <div class="item"><span>Oreo</span><span>$75</span></div>
+    </div>
+
+    <div class="category">
+      <h2>Licuados</h2>
+      <div class="item"><span>1/2 L de fresa</span><span>$49</span></div>
+      <div class="item"><span>1 L de fresa</span><span>$89</span></div>
+      <div class="item"><span>Choco Milk</span><span>$49</span></div>
+    </div>
+
+  </div>
+
+  
+  <!-- Áreas de navegación invisibles -->
+  <div id="zona-izquierda" style="position:fixed;top:0;left:0;width:50vw;height:100vh;z-index:10;"></div>
+  <div id="zona-derecha" style="position:fixed;top:0;right:0;width:50vw;height:100vh;z-index:10;"></div>
+
+  <script>
+    // Navegación por zonas clickeables
+    document.getElementById('zona-izquierda').onclick = function(e) {
+      window.location.href = 'bebidas_calientes.html';
+    };
+    document.getElementById('zona-derecha').onclick = function(e) {
+      window.location.href = '04_bebidas_frias.html';
+    };
+    // El enlace "Índice" también lleva a index.html
+    document.querySelector('.indice').setAttribute('href', 'index.html');
+    // Asegura que el contenido principal esté por encima de las zonas invisibles
+    document.querySelector('.menu-section').style.position = 'relative';
+    document.querySelector('.menu-section').style.zIndex = '20';
+    document.querySelector('h1').style.position = 'relative';
+    document.querySelector('h1').style.zIndex = '20';
+  </script>
+
+
+</body>
+</html>

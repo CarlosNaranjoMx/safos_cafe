@@ -1,110 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Bebidas frías con leche</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #000000, #c48c00);
-      color: white;
-      padding: 30px;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2em;
-      border-bottom: 2px solid #fff;
-      padding-bottom: 10px;
-    }
-    .indice {
-      background: hotpink;
-      color: white;
-      padding: 4px 10px;
-      border-radius: 10px;
-      float: right;
-      text-decoration: none;
-    }
-    .note {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 1em;
-    }
-    .menu-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 40px;
-    }
-    .category {
-      flex: 1 1 250px;
-    }
-    .category h2 {
-      border-bottom: 1px solid white;
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
-    .item {
-      display: flex;
-      justify-content: space-between;
-      margin: 4px 0;
-    }
-    .desc {
-      font-size: 0.9em;
-      font-style: italic;
-      color: #ffe;
-      margin-bottom: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebidas Frías con Leche</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #e74c3c;
+            margin-top: 30px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 10px;
+        }
+        .menu-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .item-price {
+            color: #e74c3c;
+        }
+        .item-description {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .menu-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+            margin: 15px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            overflow: hidden;
+        }
+        .menu-img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        .sub-section {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        .milk-note {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
+    <h1>Bebidas frías con leche</h1>
 
-  <h1>Bebidas frías con leche <a href="#" class="indice">Índice</a></h1>
-  <p class="note">Puedes elegir leche entera, deslactosada o por $15 más de almendra</p>
-
-  <div class="menu-section">
-
-    <div class="category">
-      <h2>Frappés</h2>
-      <div class="item"><span>Caramel</span><span>$87</span></div>
-      <div class="item"><span>Chocolate Blanco</span><span>$87</span></div>
-      <div class="item"><span>Cookies & cream</span><span>$87</span></div>
-      <div class="item"><span>Pumpkin spice</span><span>$83</span></div>
-      <div class="item"><span>Frappé de café</span><span>$83</span></div>
-      <div class="item"><span>Chocolate</span><span>$83</span></div>
-      <div class="item"><span>Moka</span><span>$83</span></div>
-      <div class="item"><span>Taro</span><span>$83</span></div>
-      <div class="item"><span>Matcha</span><span>$83</span></div>
+    <div class="milk-note">
+        <strong>Puedes elegir leche entera, deslactosada o por $15 más de almendra</strong>
     </div>
 
-    <div class="category">
-      <h2>Malteadas</h2>
-      <div class="desc">
-        Decoradas con crema batida, chocolate líquido, granillo de chocolate y cereza
-      </div>
-      <div class="item"><span>Chocolate</span><span>$75</span></div>
-      <div class="item"><span>Vainilla</span><span>$75</span></div>
-      <div class="item"><span>Fresa</span><span>$75</span></div>
-      <div class="item"><span>Oreo</span><span>$75</span></div>
+    <div class="menu-section">
+        <h2>Frappés</h2>
+        <div class="menu-image">
+            <img src="img/frappes.jpg" alt="Frappés" class="menu-img">
+        </div>
+        
+        <div class="menu-item">
+            <span class="item-name">Caramel</span>
+            <span class="item-price">$87</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Chocolate Blanco</span>
+            <span class="item-price">$87</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Cookies & cream</span>
+            <span class="item-price">$87</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Pumpkin spice</span>
+            <span class="item-price">$83</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Frappé de café</span>
+            <span class="item-price">$83</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Chocolate</span>
+            <span class="item-price">$83</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Moka</span>
+            <span class="item-price">$83</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Taro</span>
+            <span class="item-price">$83</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Matcha</span>
+            <span class="item-price">$83</span>
+        </div>
     </div>
 
-    <div class="category">
-      <h2>Licuados</h2>
-      <div class="item"><span>1/2 L de fresa</span><span>$49</span></div>
-      <div class="item"><span>1 L de fresa</span><span>$89</span></div>
-      <div class="item"><span>Choco Milk</span><span>$49</span></div>
+    <hr>
+
+    <div class="menu-section">
+        <h2>Licuados</h2>
+        <div class="menu-image">
+            <img src="img/licuados.jpg" alt="Licuados" class="menu-img">
+        </div>
+        
+        <div class="menu-item">
+            <span class="item-name">1/2 L de fresa</span>
+            <span class="item-price">$49</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">1 L de fresa</span>
+            <span class="item-price">$89</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Choco Milk</span>
+            <span class="item-price">$49</span>
+        </div>
     </div>
 
-  </div>
+    <hr>
 
-  
-  <!-- Áreas de navegación invisibles -->
+    <div class="menu-section">
+        <h2>Malteadas</h2>
+        <div class="menu-image">
+            <img src="img/malteadas.jpg" alt="Malteadas" class="menu-img">
+        </div>
+        
+        <p class="item-description">
+            Decoradas con crema batida, chocolate líquido, granillo de chocolate y cereza
+        </p>
+        
+        <div class="menu-item">
+            <span class="item-name">Chocolate</span>
+            <span class="item-price">$75</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Vainilla</span>
+            <span class="item-price">$75</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Fresa</span>
+            <span class="item-price">$75</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Oreo</span>
+            <span class="item-price">$75</span>
+        </div>
+    </div>
+
+
+
+    <!-- Áreas de navegación invisibles -->
   <div id="zona-izquierda" style="position:fixed;top:0;left:0;width:50vw;height:100vh;z-index:10;"></div>
   <div id="zona-derecha" style="position:fixed;top:0;right:0;width:50vw;height:100vh;z-index:10;"></div>
 
   <script>
     // Navegación por zonas clickeables
     document.getElementById('zona-izquierda').onclick = function(e) {
-      window.location.href = 'bebidas_calientes.html';
+      window.location.href = '02_bebidas_calientes.html';
     };
     document.getElementById('zona-derecha').onclick = function(e) {
       window.location.href = '04_bebidas_frias.html';
