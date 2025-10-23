@@ -4,88 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú de Paquetes Desayunos</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 2px solid #e74c3c;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #e74c3c;
-            margin-top: 30px;
-            border-left: 4px solid #e74c3c;
-            padding-left: 10px;
-        }
-        .menu-section {
-            background-color: white;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            margin: 10px 0;
-            padding: 8px 0;
-            border-bottom: 1px dashed #ddd;
-        }
-        .item-name {
-            font-weight: bold;
-        }
-        .item-price {
-            color: #e74c3c;
-        }
-        .item-description {
-            font-style: italic;
-            color: #7f8c8d;
-            font-size: 0.9em;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        .menu-image {
-            width: 100%;
-            height: 200px;
-            background-color: #eee;
-            margin: 15px 0;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 20px 0;
-        }
-        .sub-section {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-        .included {
-            background-color: #f0f8ff;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            font-size: 0.9em;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <!-- Enlace Índice en la esquina superior derecha -->
@@ -99,10 +18,11 @@
 
     <div class="menu-section">
         <h2>Huevos al gusto</h2>
-        <div class="menu-image">[Imagen de huevos al gusto]</div>
-        
+        <div class="menu-image">
+            <img src="img/image (15).png" alt="Huevos al gusto" class="menu-img">
+        </div>
         <div class="menu-item">
-            <span class="item-name"></span>
+            <span class="item-name">Huevos al gusto</span>
             <span class="item-price">$129</span>
         </div>
         
@@ -121,10 +41,11 @@
 
     <div class="menu-section">
         <h2>Omelette</h2>
-        <div class="menu-image">[Imagen de omelette]</div>
-        
+        <div class="menu-image">
+            <img src="img/image (16).png" alt="omelette" class="menu-img">
+        </div>
         <div class="menu-item">
-            <span class="item-name"></span>
+            <span class="item-name">Omelette</span>
             <span class="item-price">$129</span>
         </div>
         
@@ -138,8 +59,9 @@
 
     <div class="menu-section">
         <h2>Chilaquiles</h2>
-        <div class="menu-image">[Imagen de chilaquiles]</div>
-        
+        <div class="menu-image">
+            <img src="img/image (17).png" alt="chilaquiles" class="menu-img">
+        </div>
         <p class="item-description">Verdes o rojos</p>
         
         <div class="menu-item">

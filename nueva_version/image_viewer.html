@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(187, 197, 243);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        #zona-izquierda, #zona-derecha {
+            position: fixed;
+            top: 0;
+            width: 50vw;
+            height: 100vh;
+            z-index: 10;
+        }
+        #zona-izquierda {
+            left: 0;
+        }
+        #zona-derecha {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="zona-izquierda"></div>
+    <div id="zona-derecha"></div>
+    <img id="current-image" src="img/Screenshot 2025-10-22 210312.png" alt="Image Viewer">
+
+    <script>
+        const images = [
+            "img/Screenshot 2025-10-22 210312.png",
+            "img/Screenshot 2025-10-22 210321.png",
+            "img/Screenshot 2025-10-22 210331.png",
+            "img/Screenshot 2025-10-22 210339.png",
+            "img/Screenshot 2025-10-22 210346.png",
+            "img/Screenshot 2025-10-22 210357.png",
+            "img/Screenshot 2025-10-22 210406.png",
+            "img/Screenshot 2025-10-22 210416.png",
+            "img/Screenshot 2025-10-22 210425.png",
+            "img/Screenshot 2025-10-22 210438.png",
+            "img/Screenshot 2025-10-22 210451.png",
+            "img/Screenshot 2025-10-22 210501.png",
+            "img/Screenshot 2025-10-22 210513.png",
+            "img/Screenshot 2025-10-22 210523.png",
+            "img/Screenshot 2025-10-22 210533.png",
+            "img/Screenshot 2025-10-22 210541.png",
+            "img/Screenshot 2025-10-22 210550.png",
+            "img/Screenshot 2025-10-22 210601.png"
+        ];
+
+        let currentIndex = 0;
+        const currentImage = document.getElementById('current-image');
+
+        document.getElementById('zona-izquierda').onclick = function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            currentImage.src = images[currentIndex];
+        };
+
+        document.getElementById('zona-derecha').onclick = function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            currentImage.src = images[currentIndex];
+        };
+    </script>
+</body>
+</html>

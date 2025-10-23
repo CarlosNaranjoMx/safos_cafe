@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegación de Imágenes</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(187, 197, 243);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            position: absolute;
+        }
+        #zona-izquierda, #zona-derecha {
+            position: fixed;
+            top: 0;
+            width: 50vw;
+            height: 100vh;
+            z-index: 10;
+        }
+        #zona-izquierda {
+            left: 0;
+        }
+        #zona-derecha {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="zona-izquierda"></div>
+    <div id="zona-derecha"></div>
+    <img id="imagen-actual" src="" alt="Imagen Navegable">
+
+    <script>
+        const imagenes = [];
+        let indiceActual = 0;
+
+        // Cargar imágenes ordenadas por fecha
+        // Este array será llenado dinámicamente
+
+        function mostrarImagen() {
+            if (imagenes.length > 0) {
+                document.getElementById('imagen-actual').src = imagenes[indiceActual];
+            }
+        }
+
+        document.getElementById('zona-izquierda').onclick = function() {
+            indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+            mostrarImagen();
+        };
+
+        document.getElementById('zona-derecha').onclick = function() {
+            indiceActual = (indiceActual + 1) % imagenes.length;
+            mostrarImagen();
+        };
+
+        // Inicializar la primera imagen
+        mostrarImagen();
+    </script>
+</body>
+</html>
